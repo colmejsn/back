@@ -23,7 +23,7 @@ app.use(validarJwt);
 
 //const schema = {};
 // app.use se utiliza para llamar middlewares lo cuales tienen el comando next() después de ejecutarse
-app.use("/graphql", graphqlHTTP((req)=>({
+app.use("/*", graphqlHTTP((req)=>({
     graphiql: true,
     schema: schema,
     context: {
