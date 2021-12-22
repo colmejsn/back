@@ -31,6 +31,8 @@ app.use("/graphql", graphqlHTTP((req)=>({
     }
 })));
 
-app.listen(4000, () => {
-    console.log('Servidor corriendo en el puerto 4000')
-});
+app.listen({ port: process.env.PORT || 4000 });
+  
+// app.listen(4000, () => {
+//     console.log('Servidor corriendo en el puerto 4000')
+// });
